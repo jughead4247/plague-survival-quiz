@@ -1,370 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>The Plague Survival Test</title>
-
-    <meta name="description"
-        content="Take the Ultimate Plague Survival Test with 40 difficult decisions. Manage infection risk, food, water, shelter, medicine, other survivors, and morality to discover how well you would survive.">
-
-    <link rel="canonical"
-        href="https://apocalypsequizzes.com/plague-survival-quiz/">
-
-    <meta name="keywords"
-        content="plague survival test, plague survival quiz, plague quiz, disease survival test, pandemic survival quiz, plague survival trivia, plague outbreak trivia, plague outbreak quiz, plague outbreak survival quiz, plague outbreak survival trivia, plague outbreak">
-
-    <meta name="author" content="Apocalypse Quizzes">
-    <meta name="robots" content="index, follow">
-
-    <meta property="og:title"
-        content="The Plague Survival Test">
-
-    <meta property="og:description"
-        content="40 difficult decisions. One deadly outbreak. How well would you survive?">
-
-    <meta property="og:url"
-        content="https://apocalypsequizzes.com/plague-survival-quiz/">
-
-    <meta property="og:type" content="website">
-
-    <meta property="og:site_name"
-        content="Apocalypse Quizzes">
-
-    <meta property="og:locale" content="en_US">
-
-    <meta name="twitter:card" content="summary">
-
-    <meta name="twitter:title"
-        content="The Plague Survival Test">
-
-    <meta name="twitter:description"
-        content="Face 40 difficult plague-outbreak decisions and discover how well you would survive.">
-
-    <meta name="google-site-verification"
-        content="-z8Fexw2y9TUWtrAM3K_f50z2CY7BKYupiK1vBDpUAg">
-
-    <link rel="icon" type="image/png" href="favicon.png">
-    
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Google Analytics -->
-    <script async
-        src="https://www.googletagmanager.com/gtag/js?id=G-YC3ERJSBST">
-    </script>
-
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
-        gtag('js', new Date());
-
-        gtag('config', 'G-YC3ERJSBST');
-    </script>
-
-    <!-- Google AdSense -->
-    <script async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2285244517360573"
-        crossorigin="anonymous"></script>
-    
-</head>
-
-<body>
-<header class="site-header">
-    <button
-        class="menu-toggle"
-        id="menu-toggle"
-        type="button"
-        aria-label="Open navigation"
-        aria-expanded="false"
-        aria-controls="site-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-    <div class="site-title">
-        APOCALYPSE QUIZZES
-    </div>
-</header>
-<nav
-    class="site-menu"
-    id="site-menu"
-    aria-label="Main navigation"
-    hidden>
-    <div class="menu-links">
-        <a href="/">
-            🏠 Home
-        </a>
-        <a href="/search/">
-            🔎 Search Quizzes
-        </a>
-        <a href="/categories/">
-            📂 Categories
-        </a>
-        <div class="menu-divider"></div>
-        <a href="/about.html">
-            About
-        </a>
-        <a href="/privacy.html">
-            Privacy Policy
-        </a>
-        <a href="/disclaimer.html">
-            Disclaimer
-        </a>
-        <a href="/contact.html">
-            Contact
-        </a>
-    </div>
-</nav>
-<main class="container">
-
-
-
-        <!-- START SCREEN -->
-
-        <section id="start-screen" class="screen">
-
-            <p class="eyebrow">SURVIVAL TEST</p>
-            <div class="start-image">
-    <img
-        src="plague-survival.png"
-        alt="Plague Survival Test"
-    >
-</div>
-            
-            <p class="subtitle">
-                The plague has begun. Cities are shutting down.
-                Medicine is limited. Trust is dangerous.
-                Every decision could determine whether you survive.
-            </p>
-
-            <div class="info">
-                <span>40 Decisions</span>
-                <span>•</span>
-                <span>4 Choices Each</span>
-            </div>
-
-            <button id="start-btn">
-                START QUIZ
-            </button>
-
-            <p class="start-note">
-                Fictional entertainment experience.
-                Your decisions determine your result.
-            </p>
-
-        </section>
-
-
-        <!-- QUIZ SCREEN -->
-
-        <section id="quiz-screen" class="screen hidden">
-
-            <div class="quiz-header">
-
-                <span id="question-number">
-                    Decision 1 of 40
-                </span>
-
-                <span id="score-display">
-                    SURVIVAL
-                </span>
-
-            </div>
-
-            <div class="progress">
-                <div id="progress-bar"></div>
-            </div>
-
-            <h2 id="question"></h2>
-
-            <div id="answers"></div>
-
-            <div class="quiz-navigation">
-
-                <button id="back-btn" class="nav-btn hidden">
-                    ← BACK
-                </button>
-
-                <button id="next-btn" class="nav-btn">
-                    NEXT →
-                </button>
-
-                <button id="submit-btn"
-                    class="nav-btn hidden"
-                    disabled>
-                    SUBMIT
-                </button>
-
-            </div>
-
-        </section>
-
-
-        <!-- RESULT SCREEN -->
-
-        <section id="result-screen" class="screen hidden">
-
-            <div id="result-icon" class="icon">
-                ☣️
-            </div>
-
-            <p class="result-label">
-                YOUR PLAGUE OUTBREAK RESULT
-            </p>
-
-            <h1 id="result-title"></h1>
-
-
-            <!-- SURVIVAL SCORE -->
-
-            <div class="score-card">
-
-                <span class="score-card-label">
-                    SURVIVAL SCORE
-                </span>
-
-                <div class="result-score">
-                    <span id="final-score">0</span>%
-                </div>
-
-                <p>
-                    Based on the survival decisions you made.
-                </p>
-
-            </div>
-
-
-            <!-- MORALITY SCORE -->
-
-            <div class="score-card morality-card">
-
-                <span class="score-card-label">
-                    MORALITY SCORE
-                </span>
-
-                <div class="result-score morality-score">
-                    <span id="morality-score">—</span>
-                </div>
-
-                <p id="morality-description">
-                    Your morality score reflects decisions
-                    involving compassion, fairness, responsibility,
-                    loyalty, sacrifice, and other human values.
-                </p>
-
-            </div>
-
-
-            <p id="result-description"></p>
-
-
-            <div class="survival-box">
-
-                <strong>
-                    Estimated Survival:
-                </strong>
-
-                <span id="survival-time"></span>
-
-            </div>
-
-
-            <button id="restart-btn">
-                TRY AGAIN
-            </button>
-
-            <button id="share-btn">
-                📤 SHARE MY RESULT
-            </button>
-
-            <button id="challenge-btn">
-                ☣️ CHALLENGE YOUR FRIENDS
-            </button>
-
-        <!-- =================================================
-     SUGGESTED QUIZZES
-     ================================================= -->
-<section class="suggested-quizzes">
-    <h2>
-        Suggested Quizzes
-    </h2>
-    <p class="suggested-subtitle">
-        Think you can handle more? Try another quiz.
-    </p>
-    <div class="suggested-grid">
-
-<!-- ULTIMATE ZOMBIE SURVIVAL TEST -->
-        <a href="/ultimate-zombie-survival-test/" class="suggested-card">
-                        <img
-                            src="ultimate-zombie.png"
-                            alt="Ultimate Zombie Survival Test"
-                            class="suggested-image"
-            >
-            <span class="suggested-title">
-    Ultimate Zombie Apocalypse Survival Test
-</span>
-            <span class="suggested-description">
-                 Take the Ultimate Zombie Apocalypse Survival Test with 90 decisions.
-            </span>
-        </a>
-
-<!-- APOCALYPSE PREPAREDNESS QUIZ -->
-        <a href="/apocalypse-preparedness-quiz/" class="suggested-card">
-                        <img
-                            src="preparedness.png"
-                            alt=" Apocalypse Preparedness Quiz"
-                            class="suggested-image"
-            >
-            <span class="suggested-title">
-                Apocalypse Preparedness Quiz
-            </span>
-            <span class="suggested-description">
-                 How Prepared Are You for the Apocalypse?
-            </span>
-        </a>
-
-
-        <!-- NUCLEAR APOCALYPSE SURVIVAL QUIZ -->
-            <a href="/nuclear-apocalypse-quiz/" class="suggested-card">
-                        <img
-                            src="Nucleareapocalyse.png"
-                            alt=" Nuclear Apocalypse Survival Quiz "
-                            class="suggested-image"
-                        >
-                        <span class="suggested-title">
-                            Nuclear Apocalypse Survival Quiz
-                        </span>
-                        <span class="suggested-description">
-                            Could you survive a nuclear apocalypse?
-                        </span>
-                    </a>
-</div>
-</section>
-
-          <!-- MORE QUIZZES CTA -->                                                                                                          
-            <div class="more-quizzes-card"> 
-    <h3> 
-        Explore More Quizzes 
-    </h3> 
- 
-    <p> 
-        Discover more apocalypse, zombie, survival and dystopian quizzes. 
-    </p> 
- 
-    <a href="/" class="more-quizzes-btn">
-    🧟 APOCALYPSE QUIZZES
-</a>
-</div> 
-  
-</section>
-
-
         <!-- HOMEPAGE INFORMATION -->
 
         <div id="home-info">
@@ -372,27 +5,42 @@
             <section class="home-info">
 
                 <h2>
-                    How Would You Survive a Plague Outbreak?
+                    About the Plague Survival Test
                 </h2>
 
                 <p>
-                    Think you could survive a deadly plague outbreak?
-                    The Ultimate Plague Survival Test is a fictional
-                    survival quiz where your decisions determine how
-                    well you would handle the collapse of normal society.
+                    How would you survive if a dangerous infectious disease
+                    suddenly began spreading through your city? The Plague
+                    Survival Test puts you into a fictional outbreak where
+                    normal life begins breaking down and information,
+                    medicine, food, water, shelter, and trust become increasingly
+                    difficult to manage.
                 </p>
 
                 <p>
-                    Face 40 difficult outbreak decisions involving
-                    infection control, food, water, medicine, shelter,
-                    evacuation, resource management, other survivors,
-                    leadership, and long-term survival.
+                    This survival test contains 40 difficult decisions. Some
+                    situations focus on avoiding infection and managing scarce
+                    resources, while others involve evacuation, quarantine,
+                    medical treatment, strangers, family members, and the
+                    difficult choices that can appear when an outbreak lasts
+                    for weeks or months.
                 </p>
 
                 <p>
-                    Your decisions determine your Survival Score.
-                    Some decisions also reveal something about your
-                    values and contribute to a separate Morality Score.
+                    Your choices produce two different results. The Survival
+                    Score measures how effectively you manage danger and
+                    resources, while the Morality Score reflects decisions
+                    involving compassion, fairness, responsibility, loyalty,
+                    sacrifice, and other human values.
+                </p>
+
+                <p>
+                    There is no single perfect personality for every situation.
+                    A decision that protects one person may increase risk for
+                    another, while helping someone may consume resources your
+                    own group desperately needs. The test is designed around
+                    those conflicts rather than simply rewarding aggressive
+                    survival behavior.
                 </p>
 
             </section>
@@ -401,24 +49,44 @@
             <section class="home-info">
 
                 <h2>
-                    What You'll Face in the Plague Survival Test
+                    Infection Control During a Disease Outbreak
                 </h2>
 
                 <p>
-                    The 40-decision survival test puts you in situations
-                    where every choice can affect your chances of surviving.
+                    During a real infectious disease outbreak, reducing
+                    exposure is often more important than taking dramatic
+                    actions. Disease transmission depends on the pathogen and
+                    its route of spread, but crowded environments, close
+                    contact, contaminated surfaces, unsafe water, poor
+                    sanitation, and inadequate isolation can all create
+                    additional risks for certain diseases.
                 </p>
 
-                <ul>
-                    <li>Protecting yourself from infection</li>
-                    <li>Managing food and water</li>
-                    <li>Finding safe shelter</li>
-                    <li>Deciding when medical treatment is worth the risk</li>
-                    <li>Managing limited resources</li>
-                    <li>Helping or refusing other survivors</li>
-                    <li>Making difficult moral decisions</li>
-                    <li>Building a long-term survival strategy</li>
-                </ul>
+                <p>
+                    Basic infection-control measures can therefore become
+                    extremely important. Depending on the disease, these may
+                    include staying away from sick people, improving
+                    ventilation, using appropriate protective equipment,
+                    washing hands, cleaning contaminated areas, separating
+                    symptomatic people, and following public-health guidance.
+                </p>
+
+                <p>
+                    Quarantine and isolation are also different concepts.
+                    Isolation separates people who are sick from those who
+                    are not, while quarantine restricts movement or contact
+                    for people who may have been exposed. During a major
+                    outbreak, these measures can reduce transmission, but
+                    they work best when they are based on reliable information
+                    and implemented fairly.
+                </p>
+
+                <p>
+                    The safest decision is not always the most dramatic one.
+                    Avoiding unnecessary exposure, monitoring symptoms, and
+                    obtaining reliable information can prevent a manageable
+                    situation from becoming a much more dangerous one.
+                </p>
 
             </section>
 
@@ -426,67 +94,204 @@
             <section class="home-info">
 
                 <h2>
-                    Frequently Asked Questions
+                    Food, Water, Medicine and Essential Resources
+                </h2>
+
+                <p>
+                    A prolonged outbreak can create problems even when the
+                    disease itself is not directly affecting everyone.
+                    Transport disruptions, worker shortages, panic buying,
+                    closed businesses, damaged supply chains, and restrictions
+                    on movement can make ordinary necessities harder to obtain.
+                </p>
+
+                <p>
+                    Water is especially important because drinking is only one
+                    part of household water demand. Cooking, cleaning, hygiene,
+                    sanitation, and medical care all require water. If a normal
+                    water source becomes contaminated, people may need to find
+                    another source and use an appropriate treatment method
+                    rather than simply continuing to use unsafe water.
+                </p>
+
+                <p>
+                    Food storage also requires planning. Panic buying can
+                    temporarily remove supplies from stores, while taking far
+                    more than necessary can make shortages worse for everyone
+                    else. A sustainable survival strategy considers how long
+                    supplies will last, how they can be replaced, and how many
+                    people depend on them.
+                </p>
+
+                <p>
+                    Medicine creates another difficult problem. A limited supply
+                    may have to be shared between multiple patients, while
+                    hospitals themselves may become overwhelmed. Real medical
+                    decisions depend on trained professionals, available
+                    treatments, patient condition, and public-health guidance.
+                    The quiz uses simplified fictional situations to explore
+                    the difficult resource choices that can arise during a
+                    prolonged emergency.
+                </p>
+
+            </section>
+
+
+            <section class="home-info">
+
+                <h2>
+                    Evacuation, Shelter and Community Survival
+                </h2>
+
+                <p>
+                    Leaving an infected city may seem like the obvious solution,
+                    but evacuation can introduce its own risks. Roads can become
+                    crowded, fuel can become scarce, transportation networks
+                    can fail, and large groups of people can create additional
+                    exposure opportunities.
+                </p>
+
+                <p>
+                    A remote location may provide fewer contacts and greater
+                    access to natural resources, but isolation also has major
+                    disadvantages. A small settlement may have limited medical
+                    care, electricity, communication, tools, skilled workers,
+                    and food production. A hospital or urban area may offer
+                    better medical resources while simultaneously creating
+                    greater exposure risk.
+                </p>
+
+                <p>
+                    Shelter therefore involves more than finding a building.
+                    Long-term survival depends on clean water, sanitation,
+                    food production or reliable supplies, waste management,
+                    communication, security, medical knowledge, and people
+                    capable of maintaining essential systems.
+                </p>
+
+                <p>
+                    Communities can also be more resilient than isolated
+                    individuals. A doctor, engineer, farmer, mechanic, teacher,
+                    electrician, or other skilled person can provide knowledge
+                    that becomes extremely valuable when normal services fail.
+                    Cooperation can increase survival capacity, but it also
+                    requires rules for distributing limited resources and
+                    managing health risks.
+                </p>
+
+            </section>
+
+
+            <section class="home-info">
+
+                <h2>
+                    The Human Side of a Plague Survival Scenario
+                </h2>
+
+                <p>
+                    Disease outbreaks create difficult ethical questions because
+                    survival decisions rarely affect only one person. A family
+                    member may need treatment while supplies are limited. A
+                    stranger may need shelter after travelling from an infected
+                    area. A settlement may have to decide whether newcomers
+                    should be admitted, screened, quarantined, or refused.
+                </p>
+
+                <p>
+                    These decisions create a conflict between individual
+                    compassion and collective risk. Helping someone can save a
+                    life, but uncontrolled contact can expose an entire
+                    household or community. At the same time, treating every
+                    unknown person as a threat can destroy cooperation and trust.
+                </p>
+
+                <p>
+                    Fair rules become particularly important when resources
+                    are scarce. Decisions about medicine, food, shelter, or
+                    evacuation should ideally be based on consistent principles
+                    rather than simply giving advantages to friends, powerful
+                    people, or whoever happens to arrive first.
+                </p>
+
+                <p>
+                    The Morality Score in this test does not determine whether
+                    you are a good or bad person. It simply reflects patterns
+                    in the choices you make. A highly compassionate decision
+                    can sometimes increase personal risk, while a harsh-looking
+                    decision may protect a larger group. The interesting part is
+                    seeing where you draw that line.
+                </p>
+
+            </section>
+
+
+            <section class="home-info">
+
+                <h2>
+                    Plague Survival Test FAQ
                 </h2>
 
 
                 <h3>
-                    How does the plague survival quiz work?
+                    How many decisions are in the test?
                 </h3>
 
                 <p>
-                    You face a series of fictional plague-outbreak
-                    situations. Each situation gives you four choices.
-                    Your decisions affect your survival result.
+                    The Plague Survival Test contains 40 decisions. Every
+                    situation gives you four possible choices, and your selected
+                    answers determine your final Survival and Morality results.
                 </p>
 
 
                 <h3>
-                    How many questions are in the plague survival test?
+                    How is the Survival Score calculated?
                 </h3>
 
                 <p>
-                    The test contains 40 decisions.
-                    Each decision presents four choices.
-                    Every choice contributes to Survival Score,
-                    while selected decisions also contribute to
-                    Morality Score.
+                    Every decision contributes to your Survival Score. The
+                    choices are scored according to how well they handle
+                    infection risk, resources, shelter, travel, medical
+                    situations, and long-term survival. Your final score is
+                    converted into a percentage.
                 </p>
 
 
                 <h3>
-                    What is the Survival Score?
+                    What does the Morality Score measure?
                 </h3>
 
                 <p>
-                    Your Survival Score represents how effectively
-                    your choices handle infection risk, resources,
-                    shelter, medical needs, travel, and other
-                    survival challenges.
+                    Some decisions contain a separate morality value. These
+                    choices examine issues such as compassion, fairness,
+                    responsibility, loyalty, sacrifice, and helping other
+                    people. Your result ranges from Ruthless Pragmatist to
+                    Humanitarian.
                 </p>
 
 
                 <h3>
-                    What is the Morality Score?
+                    What are the survival result levels?
                 </h3>
 
                 <p>
-                    Morality is measured only on decisions where
-                    your choice actually reveals something about
-                    your values. It can reflect compassion, fairness,
-                    responsibility, loyalty, sacrifice, justice,
-                    and respect for human life.
+                    Your Survival Score places you into one of five categories:
+                    Extremely Vulnerable, Short-Term Survivor, Survivor,
+                    Outbreak Survivor, or Master Survivor. The test also gives
+                    an estimated survival period based on your result.
                 </p>
 
 
                 <h3>
-                    Is this a real survival test?
+                    Is this test medically accurate?
                 </h3>
 
                 <p>
-                    No. This is fictional entertainment and does not
-                    predict how someone would perform during a real
-                    disaster, epidemic, or emergency.
+                    No. This is a fictional entertainment experience, not
+                    medical advice or a professional emergency-planning tool.
+                    Real infectious diseases differ greatly in transmission,
+                    symptoms, treatment, mortality, and prevention. During an
+                    actual outbreak, follow guidance from qualified medical and
+                    public-health authorities.
                 </p>
 
 
@@ -495,8 +300,10 @@
                 </h3>
 
                 <p>
-                    Yes. Select TRY AGAIN after receiving your result
-                    and make different decisions.
+                    Yes. Select TRY AGAIN after receiving your result and make
+                    different decisions. Comparing different attempts can show
+                    how changing your priorities affects both survival and
+                    morality.
                 </p>
 
 
@@ -505,48 +312,11 @@
                 </h3>
 
                 <p>
-                    Yes. Use the Challenge Your Friends button after
-                    completing the test and see who makes the best
-                    survival decisions.
+                    Yes. After completing the test, use the Challenge Your
+                    Friends button to share your result and see how other
+                    people handle the same outbreak decisions.
                 </p>
 
             </section>
 
         </div>
-
-    </main>
-
-
-    <!-- FOOTER -->
-
-    <footer class="site-footer">
-    <div class="footer-inner">
-        <div class="footer-brand">
-            APOCALYPSE QUIZZES
-        </div>
-        <div class="footer-links">
-            <a href="/about.html">
-                About
-            </a>
-            <a href="/privacy.html">
-                Privacy Policy
-            </a>
-            <a href="/disclaimer.html">
-                Disclaimer
-            </a>
-            <a href="/contact.html">
-                Contact
-            </a>
-        </div>
-        <div class="copyright">
-            © 2026 Apocalypse Quizzes
-        </div>
-    </div>
-</footer>
-
-
-    <script src="script.js"></script>
-
-</body>
-
-</html>
